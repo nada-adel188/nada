@@ -1,0 +1,67 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلغاء الحجز - جولات النخبة</title>
+    <link href="https://fonts.googleapis.com/css2?family =Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9f5ff;
+            color: #333;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .cancel-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            background: #FF5733;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #C70039;
+        }
+    </style>
+</head>
+<body>
+
+<h2>إلغاء الحجز</h2>
+
+<div class="cancel-container">
+    <form action="cancel_process.php" method="POST">
+        <label for="email">:البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+        <label for="booking_id">:رقم الحجز</label>
+        <input type="text" id="booking_id" name="booking_id" required>
+        <button type="submit" class="button">إلغاء الحجز</button>
+    </form>
+</div>
+
+<a href="index.html" class="button">العودة إلى الصفحة الرئيسية</a>
+
+</body>
+</html>

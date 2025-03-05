@@ -1,0 +1,168 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جولات النخبة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #007BFF, #00BFFF);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #007BFF;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 18px;
+        }
+        .button {
+            background: #00BFFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background: #007BFF;
+            transform: scale(1.05);
+        }
+        .marquee {
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #007BFF;
+            color: white;
+            font-size: 28px;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .marquee span {
+            display: inline-block;
+            position: absolute;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>جولات النخبة</h1>
+    <nav>
+        <a href="login.html" class="button">تسجيل الدخول</a>
+        <a href="register.html" class="button">تسجيل جديد</a>
+        <a href="booking.html" class="button">الحجز</a>
+        <a href="cancel.html" class="button">إلغاء الحجز</a>
+        <a href="testimonials.html" class="button">الشهادات</a>
+        <a href="blog.html" class="button">المدونة</a>
+        <a href="faq.html" class="button">الأسئلة الشائعة</a>
+        <a href="privacy.html" class="button">سياسة الخصوصية</a>
+        <a href="terms.html" class="button">الشروط والأحكام</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="marquee">
+        <span>!مرحبًا بكم في جولات النخبة</span>
+    </div>
+
+    <section id="about">
+        <h2>عن الشركة</h2>
+        <p>.نحن شركة سياحة رائدة نقدم أفضل العروض السياحية والخدمات لعملائنا. هدفنا هو تقديم تجارب سفر لا تُنسى</p>
+    </section>
+
+    <section id="services">
+        <h2>الخدمات</h2>
+        <p>.نقدم مجموعة متنوعة من الخدمات السياحية، بما في ذلك جولات ، حجز الفنادق، وتأجير السيارات</p>
+    </section>
+
+    <section id="countries">
+        <h2>الدول التي يمكن زيارتها</h2>
+        <ul class="country-list">
+            <li>كوريا الجنوبية</li>
+            <li>فلسطين</li>
+            <li>فرنسا</li>
+            <li>إيطاليا</li>
+            <li>مصر</li>
+            <li>أستراليا</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <p>!إذا كان لديك أي استفسارات أو تحتاج إلى مساعدة، لا تتردد في التواصل معنا</p>
+        <a href="contact.html" class="button">نموذج الاتصال</a>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 جولات النخبة. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>

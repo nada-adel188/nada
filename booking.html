@@ -1,0 +1,78 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحجز - جولات النخبة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9f5ff;
+            color: #333;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .booking-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h2>احجز جولتك الآن</h2>
+
+<div class="booking-container">
+    <form action="booking_process.php" method="POST">
+        <label for="name">:الاسم</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">:البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+        <label for="destination">:الوجهة</label>
+        <select id="destination" name="destination" required>
+            <option value="كوريا الجنوبية">كوريا الجنوبية</option>
+            <option value="فلسطين">فلسطين</option>
+            <option value="فرنسا">فرنسا</option>
+            <option value="إيطاليا">إيطاليا</option>
+            <option value="مصر">مصر</option>
+            <option value="أستراليا">أستراليا</option>
+        </select>
+        <label for="date">:تاريخ الجولة</label>
+        <input type="date" id="date" name="date" required>
+        <button type="submit" class="button">احجز الآن</button>
+    </form>
+</div>
+
+<a href="index.html" class="button">العودة إلى الصفحة الرئيسية</a>
+
+</body>
+</html>
